@@ -3,9 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formularios</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <form>      <!--creo el formulario-->
+    <fieldset>      <!--creo un campo para agrupar los elementos del formulario-->
+        <legend><h1>Formulario de datos personales</h1></legend>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required/> <br/><br/>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required/> <br/><br/>
+       
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" min="0" max="110" required/> <br/><br/>  <!--creo un campo para introducir la edad, con un mínimo de 0 y un máximo de 110-->
+        
+        <label for="nacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="nacimiento" name="nacimiento" required/> <br/><br/>
+       
+       <label for="mensaje">Escriba sobre usted mismo:</label>
+       <textarea id="mensaje" name="mensaje" required></textarea> <br/><br/>
+        
+        <label for="provincia">Provincia de Andalucía:</label> <!--creo un campo de selección para la provincia de Andalucía-->
+        <select id="provincia" name="provincia" required>
+            <option value="almeria">Almería</option>
+            <option value="cadiz">Cádiz</option>
+            <option value="cordoba">Córdoba</option>
+            <option value="granada">Granada</option>
+            <option value="huelva">Huelva</option>
+            <option value="jaen">Jaén</option>
+            <option value="malaga">Málaga</option>
+            <option value="sevilla">Sevilla</option>
+        </select> <br/><br/>
+
+        <label for="telefono">Teléfono:</label> <!--creo un campo para introducir el número de teléfono-->
+        <input type="tel" id="telefono" name="telefono" placeholder="+34123456789" required/> <br/><br/>
+       
+        <label for="mesfav">Mes favorito del año:</label> <!--creo un campo de selección para el mes favorito del año-->
+        <select id="mesfav" name="mesfav" required>
+            <option value="enero">Enero</option>
+            <option value="febrero">Febrero</option>
+            <option value="marzo">Marzo</option>
+            <option value="abril">Abril</option>
+            <option value="mayo">Mayo</option>
+            <option value="junio">Junio</option>
+            <option value="julio">Julio</option>
+            <option value="agosto">Agosto</option>
+            <option value="septiembre">Septiembre</option>
+            <option value="octubre">Octubre</option>
+            <option value="noviembre">Noviembre</option>
+            <option value="diciembre">Diciembre</option>
+        </select> <br/><br/>
+       
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo" required> <!--creo un campo de selección para el sexo-->
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+        </select> <br/><br/>
+       
+        <label for="email">Dirección de correo electrónico:</label> <!--creo un campo para introducir la dirección de correo electrónico-->
+        <input type="email" id="email" name="email" placeholder="correode@prueba.com" required/> <br/><br/>
+       
+        <label for="imagen">Suba una imagen suya:</label>
+        <input type="file" id="imagen" name="imagen" required/> <br/><br/>  <!--creo un campo para subir un archivo-->
+       
+        <label for="progreso">Progreso en HTML:</label>
+        <input type="range" id="progreso" name="progreso" min="0" max="100" required/> <br/><br/>
+       
+        <label for="comidasfav">Comidas favoritas:</label>      <!--creo un campo de selección múltiple para las comidas favoritas-->
+            <input type="checkbox" name="comida" value="pizza"/> Pizza
+            <input type="checkbox" name="comida" value="pasta"/> Pasta
+            <input type="checkbox" name="comida" value="tortilla"/> Tortilla
+            <input type="checkbox" name="comida" value="hamburguesa"/> Hamburguesa
+            <input type="checkbox" name="comida" value="paella"/> Paella
+            <input type="checkbox" name="comida" value="croquetas"/> Croquetas
+            <input type="checkbox" name="comida" value="ensaladilla"/> Ensaladilla
+            <input type="checkbox" name="comida" value="otro"/> Otro
+        <br/><br/>
+
+        <label for="hobbies">Hobbies:</label>
+        <select size="7" multiple id="hobbies" name="hobbies" required> <!--creo un campo de selección múltiple para los hobbies-->
+            <option value="deporte">Deporte</option>
+            <option value="musica">Música</option>
+            <option value="lectura">Lectura</option>
+            <option value="cine">Cine</option>
+            <option value="tecnologia">Tecnología</option>
+            <option value="viajar">Viajar</option>
+            <option value="otro">Otro</option>
+        </select> <br/><br/>
+       
+        <input type="submit"/>
+        
+        <input type="reset"/>
+
+    </fieldset>
+    </form>
 </body>
 </html>
